@@ -67,11 +67,7 @@ export default function ProductDetailPage() {
             <H3 className={"mt-6 text-blue"}>฿ 380</H3>
 
             <div className="mt-[15.5px] flex h-[224px] flex-1 items-baseline gap-4 text-nowrap">
-              <BodyText
-                className={
-                  "line-clamp-1 w-20 flex-shrink-0 text-neutral-secondary"
-                }
-              >
+              <BodyText className="w-20 flex-shrink-0 text-sm text-neutral-secondary">
                 ตัวเลือกสินค้า
               </BodyText>
 
