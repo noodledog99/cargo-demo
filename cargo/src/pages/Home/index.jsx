@@ -99,6 +99,11 @@ export default function HomePage() {
         <ButtonGradient className="bg-cyan-300">
           Button Class Tailwind Gunt
         </ButtonGradient>
+
+        <div className="text-accent-green bg-cyan-300">test text</div>
+
+        <i class="lab la-accessible-icon"></i>
+        <i class="las la-bell"></i>
       </div>
     </Div>
   );

@@ -9,7 +9,7 @@ const ButtonStyled = styled.button`
 function ButtonOutline({ children, className, ...props }) {
   return (
     <ButtonStyled
-      className={`border border-solid border-cyan font-semibold p-3 rounded-lg text-cyan ${className}`}
+      className={`border border-solid border-blue font-semibold p-3 rounded-lg text-blue ${className}`}
       {...props}
     >
       {children}
