@@ -41,8 +41,8 @@ export default {
       "accent-green": "#3BC38A",
     },
     backgroundImage: {
-      "blue-lilac": "linear-gradient(to right, #00A7F0, #B882E9)",
-      "cyan-blue": "linear-gradient(to right, #3CDFFF, #00A7F0)",
+      "blue-lilac": "linear-gradient(to left, #00A7F0, #B882E9)",
+      "cyan-blue": "linear-gradient(to left, #3CDFFF, #00A7F0)",
     },
   },
   plugins: [],
