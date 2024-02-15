@@ -2,9 +2,7 @@ import React from "react";
 
 import styled from "@emotion/styled";
 
-const ButtonStyled = styled.button`
-  min-width: 240px;
-`;
+const ButtonStyled = styled.button``;
 
 function ButtonOutline({ children, className, ...props }) {
   return (
