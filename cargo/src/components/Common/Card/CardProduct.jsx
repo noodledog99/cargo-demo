@@ -26,7 +26,10 @@ export default function CardProduct({ productItem, ...props }) {
               </Caption>
               <img src={ThialandIcon} alt="thailand_icon" className="w-4" />
             </div>
-            <img src={productItem.product_image} className="product-img " />
+            <img
+              src={productItem.product_image}
+              className="product-img h-44 w-full object-cover"
+            />
           </div>
           {/*  */}
           <div className="gap-2 px-1 pb-4 pl-2 pr-2 pt-2 hover:bg-cyan-50 ">
