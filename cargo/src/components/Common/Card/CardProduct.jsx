@@ -16,7 +16,7 @@ const Div = styled.div`
 export default function CardProduct({ productItem, ...props }) {
   return (
     <Div {...props}>
-      <Card className={"hover:border-2 hover:border-cyan"}>
+      <Card className={"hover:border-2 hover:border-cyan "}>
         <div className="product-content">
           {/*  */}
           <div className="img-content relative w-full">
@@ -26,7 +26,7 @@ export default function CardProduct({ productItem, ...props }) {
               </Caption>
               <img src={ThialandIcon} alt="thailand_icon" className="w-4" />
             </div>
-            <img src={productItem.product_image} className="product-img " />
+            <img src={productItem.product_image} className="product-img w-full object-cover h-44" />
           </div>
           {/*  */}
           <div className="gap-2 px-1 pb-4 pl-2 pr-2 pt-2 hover:bg-cyan-50 ">
