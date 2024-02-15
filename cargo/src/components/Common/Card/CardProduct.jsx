@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Card from "./Card";
+import BodyText from "../../Typography/BodyText";
+import H4Light from "../../Typography/H4Light"
 
-import { Card } from "./Card";
 
 const Div = styled.div`
   .fig-size-h1 {
@@ -18,25 +20,25 @@ const Div = styled.div`
   }
 `;
 
-export default function CardProduct() {
+export default function CardProduct({productName, price, rate, image}) {
   return (
     <Div>
       <Card>
         <div className="product-content">
-          <img src={hironoV2Image} className="product-img block" />
+          <img src={image} className="product-img block" />
           <div className="mt-2 gap-2 pb-4 pl-2 pr-2 pt-0">
-            <H4Light className="product-title">{title}</H4Light>
-            <BodyText className={"text-blue"}>฿ 450</BodyText>
+            <H4Light className="product-title">{productName}</H4Light>
+            <BodyText className={"text-blue"}>{`฿ ${price}`}</BodyText>
             <div className="rating-content">
               <div className="rating flex items-center">
-                <div className="star">
+                <div className="star mr-1">
                   <i className="las la-star h-4 w-4 text-cyan"></i>
                   <i className="las la-star h-4 w-4 text-cyan"></i>
                   <i className="las la-star h-4 w-4 text-cyan"></i>
                   <i className="las la-star-half-alt h-4 w-4 text-cyan"></i>
                   <i className="lar la-star h-4 w-4 text-cyan"></i>
                 </div>
-                <BodyText className="rate-text text-sm">1.2k</BodyText>
+                <BodyText className="rate-text text-sm text-neutral-secondary">{rate}</BodyText>
               </div>
             </div>
           </div>
