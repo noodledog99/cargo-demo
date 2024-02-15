@@ -9,7 +9,7 @@ const ButtonStyled = styled.button`
 function ButtonGradient({ children, className, ...props }) {
   return (
     <ButtonStyled
-      className={`bg-blue-lilac border-none font-semibold p-3 rounded-lg text-neutral-white ${className}`}
+      className={`rounded-lg border-none bg-blue-lilac p-3 font-semibold text-neutral-white ${className}`}
       {...props}
     >
       {children}

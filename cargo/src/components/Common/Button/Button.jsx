@@ -9,7 +9,7 @@ const ButtonStyled = styled.button`
 function Button({ children, className, ...props }) {
   return (
     <ButtonStyled
-      className={`bg-neutral-hint border border-neutral-hint border-solid font-semibold p-3 rounded-lg text-neutral-main ${className}`}
+      className={`rounded-lg border border-solid border-neutral-hint bg-neutral-hint p-3 font-semibold text-neutral-main ${className}`}
       {...props}
     >
       {children}
