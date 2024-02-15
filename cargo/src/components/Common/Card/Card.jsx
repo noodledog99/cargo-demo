@@ -1,8 +1,6 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
+import React from "react";
 
-export default function Card({ children, width, className, ...props }) {
+function Card({ children, className, ...props }) {
   return (
     <div
       className={`overflow-hidden rounded-lg border border-neutral-line ${className}`}
@@ -12,3 +10,5 @@ export default function Card({ children, width, className, ...props }) {
     </div>
   );
 }
+
+export default Card;
