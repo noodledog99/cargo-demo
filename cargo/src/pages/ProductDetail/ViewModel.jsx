@@ -89,6 +89,10 @@ export default function ViewModel() {
     MOCK_PRODUCT_RELATE_LIST,
   );
 
+  const goProductDetail = (id) => {
+    navigate(`/product-detail/${id}`);
+  };
+
   const goBack = () => {
     navigate(-1);
   };
@@ -96,6 +100,7 @@ export default function ViewModel() {
   return {
     productList,
     productRelateList,
+    goProductDetail,
     goBack,
   };
 }
