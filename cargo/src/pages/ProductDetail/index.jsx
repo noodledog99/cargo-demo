@@ -7,20 +7,32 @@ import ButtonOutline from "./../../components/Common/Button/ButtonOutline";
 import ButtonGradient from "./../../components/Common/Button/ButtonGradient";
 import H4 from "./../../components/Typography/H4";
 import TextLink from "../../components/Typography/TextLink";
+import SelectedProductCard from "./components/SelectedProduct";
+import CardProduct from "../../components/Common/Card/CardProduct";
+import hironoV2Image from "../../assets/images/hirono-v2-image.png";
 
 export default function ProductDetailPage() {
-  const { demoCards, productRelateList, goBack } = ViewModel();
+  const { productList, productRelateList, goBack } = ViewModel();
 
   return (
     <div className="flex w-full flex-col gap-12">
       <div className="flex w-full flex-col gap-4">
-        <p className="flex items-center gap-1" onClick={goBack}>
+        <p
+          className={"flex cursor-pointer items-center gap-1"}
+          onClick={goBack}
+        >
           <i class="las la-arrow-left text-blue"></i>
           <Caption className={"text-blue"}>ย้อนกลับ</Caption>
         </p>
         <div className="flex w-full gap-10">
-          <div className="flex w-[553px] flex-shrink-0">image</div>
-          <div className="flex flex-1 flex-col gap-2">
+          <div className="flex w-[553px] flex-shrink-0">
+            <img
+              src={hironoV2Image}
+              className="h-[415px] w-full rounded-lg object-cover"
+              alt="image-product"
+            />
+          </div>
+          <div className="flex flex-1 flex-col">
             <div className="flex items-center justify-between">
               <p className="flex items-center gap-1">
                 <i class="las la-home"></i>
@@ -40,8 +52,8 @@ export default function ProductDetailPage() {
               </p>
             </div>
 
-            <H3>Hirono V2</H3>
-            <div className="flex items-center gap-1">
+            <H3 className={"mt-[6.5px]"}>Hirono V2</H3>
+            <div className="mt-2 flex items-center gap-1">
               {" "}
               <i class="las la-star text-cyan"></i>
               <i class="las la-star text-cyan"></i>
@@ -52,15 +64,19 @@ export default function ProductDetailPage() {
                 1.2k
               </BodyText>
             </div>
-            <H3 className={"text-blue"}>฿ 380</H3>
+            <H3 className={"mt-6 text-blue"}>฿ 380</H3>
 
-            <div className="line-clamp-1 flex h-[224px] flex-1 items-baseline gap-4 text-nowrap">
-              <BodyText className={"w-20 flex-shrink-0 text-neutral-secondary"}>
+            <div className="mt-[15.5px] flex h-[224px] flex-1 items-baseline gap-4 text-nowrap">
+              <BodyText
+                className={
+                  "line-clamp-1 w-20 flex-shrink-0 text-neutral-secondary"
+                }
+              >
                 ตัวเลือกสินค้า
               </BodyText>
 
               <div className="flex h-full flex-1 flex-wrap gap-4">
-                {demoCards.map((v, i) => (
+                {productList.map((v, i) => (
                   <SelectedProductCard key={i} data={v} />
                 ))}
               </div>
@@ -78,13 +94,17 @@ export default function ProductDetailPage() {
             </div>
             <div className="mt-6 flex items-center gap-6">
               <ButtonOutline
-                className={"flex h-[54px] items-center justify-center gap-2"}
+                className={
+                  "flex h-[54px] w-[240px] items-center justify-center gap-2"
+                }
               >
                 <i class="las la-cart-plus text-[24px] text-blue"></i>
                 <H4>เพิ่มใส่ตระกร้า</H4>
               </ButtonOutline>
               <ButtonGradient
-                className={"flex h-[54px] items-center justify-center gap-2"}
+                className={
+                  "flex h-[54px] w-[240px] items-center justify-center gap-2"
+                }
               >
                 <H4>ซื้อสินค้า</H4>
               </ButtonGradient>
@@ -100,9 +120,9 @@ export default function ProductDetailPage() {
           </H4>
           <TextLink className={"text-blue"}>เพิ่มเติม</TextLink>
         </div>
-        <div className="flex items-baseline gap-8 px-4">
-          {productRelateList.map((it) => (
-            <div>test</div>
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          {productRelateList.map((it, index) => (
+            <CardProduct productItem={it} key={index} />
           ))}
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import ViewModel from "./ViewModel";
-
 import styled from "@emotion/styled";
 import H4 from "../../components/Typography/H4";
 import ButtonGradient from "../../components/Common/Button/ButtonGradient";
@@ -11,7 +10,7 @@ import CardProduct from "../../components/Common/Card/CardProduct";
 const Div = styled.div``;
 
 export default function HomePage() {
-  const { productList } = ViewModel();
+  const { productList, goProductDetail } = ViewModel();
 
   return (
     <Div>
@@ -31,7 +30,7 @@ export default function HomePage() {
 
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {productList.map((v) => (
-          <CardProduct productItem={v} />
+          <CardProduct onClick={goProductDetail} productItem={v} />
         ))}
       </div>
     </Div>

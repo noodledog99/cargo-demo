@@ -3,9 +3,9 @@ import Card from "./Card";
 import BodyText from "../../Typography/BodyText";
 import H4Light from "../../Typography/H4Light";
 
-export default function CardProduct({ productItem }) {
+export default function CardProduct({ productItem, onClick }) {
   return (
-    <Card>
+    <Card onClick={onClick}>
       <div className="product-content">
         <img src={productItem.product_image} className="product-img block" />
         <div className="mt-2 gap-2 pb-4 pl-2 pr-2 pt-0">

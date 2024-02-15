@@ -4,14 +4,23 @@ import H4 from "./../Typography/H4";
 import H4Light from "./../Typography/H4Light";
 import Caption from "./../Typography/Caption";
 import TextLink from "../Typography/TextLink";
+import { useNavigate } from "react-router";
 
 export default function Header() {
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate("/");
+  };
+
   return (
     <div className="bg-neutral-white drop-shadow-md">
       <div className="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between px-10 py-3">
         <div className="flex h-12 items-center gap-6">
-          <img src={Logo} alt="logo" />
-          <H4 className={"px-4 py-[10.5px] text-blue"}>Home</H4>
+          <img src={Logo} alt="logo" onClick={goHome} />
+          <H4 className={"px-4 py-[10.5px] text-blue"} onClick={goHome}>
+            Home
+          </H4>
           <H4Light
             className={"px-4 py-[10.5px] font-normal text-neutral-secondary"}
           >

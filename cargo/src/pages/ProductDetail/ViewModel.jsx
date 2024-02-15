@@ -1,19 +1,14 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router";
+import demoSelectedProduct from "../../assets/images/demo-selected-product.png";
+import hironoV2Image from "../../assets/images/hirono-v2-image.png";
 
 const MOCK_PRODUCT_LIST = [
   {
     name: "1 สุ่ม",
     img: demoSelectedProduct,
   },
-  {
-    name: "1 สุ่ม",
-    img: demoSelectedProduct,
-  },
-  {
-    name: "ไดโนเสาร์",
-    img: demoSelectedProduct,
-  },
+
   {
     name: "ไดโนเสาร์",
     img: demoSelectedProduct,
@@ -27,68 +22,69 @@ const MOCK_PRODUCT_LIST = [
     img: demoSelectedProduct,
   },
   {
-    name: "ตัวตลก",
-    img: demoSelectedProduct,
-  },
-  {
     name: "กล่องของเล่น",
     img: demoSelectedProduct,
   },
   {
-    name: "กล่องของเล่น",
+    name: "สินค้าหมด",
     img: demoSelectedProduct,
   },
   {
-    name: "กล่องของเล่น",
+    name: "นกอิสระ",
     img: demoSelectedProduct,
   },
   {
-    name: "กล่องของเล่น",
+    name: "อ่างอาบน้ำ",
     img: demoSelectedProduct,
   },
   {
-    name: "กล่องของเล่น",
-    img: demoSelectedProduct,
-  },
-  {
-    name: "กล่องของเล่น",
+    name: "สุ่ม 12 กล่อง",
     img: demoSelectedProduct,
   },
 ];
 
 const MOCK_PRODUCT_RELATE_LIST = [
   {
-    image: "",
-    name: "Pop MART Hirono V3",
-    price: 350,
+    id: 1,
+    product_name: "Hirono V2",
+    price: 580,
+    rate: "1.2k",
+    product_image: hironoV2Image,
   },
   {
-    image: "",
-    name: "Pop MART Hirono V1",
-    price: 450,
+    id: 2,
+    product_name: "Hirono V2",
+    price: 580,
+    rate: "1.2k",
+    product_image: hironoV2Image,
   },
   {
-    image: "",
-    name: "Hirono Fox",
-    price: 600,
+    id: 3,
+    product_name: "Hirono V2",
+    price: 580,
+    rate: "1.2k",
+    product_image: hironoV2Image,
   },
   {
-    image: "",
-    name: "Hirono 2024",
-    price: 90,
-    discountFrom: 150,
+    id: 4,
+    product_name: "Hirono V2",
+    price: 580,
+    rate: "1.2k",
+    product_image: hironoV2Image,
   },
   {
-    image: "",
-    name: "Pop MART Hirono V1",
-    price: 450,
+    id: 5,
+    product_name: "Hirono V2",
+    price: 580,
+    rate: "1.2k",
+    product_image: hironoV2Image,
   },
 ];
 
 export default function ViewModel() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const [demoCards, setDemoCards] = useState(MOCK_PRODUCT_LIST);
+  const [productList, setProductList] = useState(MOCK_PRODUCT_LIST);
   const [productRelateList, setProductRelateList] = useState(
     MOCK_PRODUCT_RELATE_LIST,
   );
@@ -98,7 +94,7 @@ export default function ViewModel() {
   };
 
   return {
-    demoCards,
+    productList,
     productRelateList,
     goBack,
   };
