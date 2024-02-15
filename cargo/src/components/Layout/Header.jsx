@@ -17,12 +17,22 @@ export default function Header() {
     <div className="bg-neutral-white drop-shadow-md">
       <div className="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between px-10 py-3">
         <div className="flex h-12 items-center gap-6">
-          <img src={Logo} alt="logo" onClick={goHome} />
-          <H4 className={"px-4 py-[10.5px] text-blue"} onClick={goHome}>
+          <img
+            className="hover:cursor-pointer"
+            src={Logo}
+            alt="logo"
+            onClick={goHome}
+          />
+          <H4
+            className={"px-4 py-[10.5px] text-blue hover:cursor-pointer"}
+            onClick={goHome}
+          >
             Home
           </H4>
           <H4Light
-            className={"px-4 py-[10.5px] font-normal text-neutral-secondary"}
+            className={
+              "px-4 py-[10.5px] font-normal text-neutral-secondary hover:cursor-pointer"
+            }
           >
             สินค้าพร้อมส่ง
           </H4Light>
