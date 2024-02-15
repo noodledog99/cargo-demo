@@ -46,12 +46,7 @@ export default function HomePage() {
 
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {productList.map((v) => (
-          <CardProduct
-            productName={v.product_name}
-            price={v.price}
-            rate={v.rate}
-            image={v.product_image}
-          />
+          <CardProduct productItem={v} />
         ))}
       </div>
     </Div>
