@@ -5,9 +5,10 @@ import styled from "@emotion/styled";
 import H4 from "../../components/Typography/H4";
 import BodyText from "../../components/Typography/BodyText";
 import ButtonGradient from "../../components/Common/Button/ButtonGradient";
-import { Card, CardBody } from "../../components/Common/Card/Card";
 import hironoV2Image from "../../assets/images/hirono-v2-image.png";
 import SearchText from "../../components/Common/Input/SearchText";
+import Card from "../../components/Common/Card/Card";
+import CardProduct from "../../components/Common/Card/CardProduct";
 
 const Div = styled.div`
   .fig-size-h1 {
@@ -45,27 +46,7 @@ export default function HomePage() {
 
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {productList.map((v) => (
-          <Card>
-            <CardBody>
-              <div className="product-content">
-                <img src={hironoV2Image} className="product-img block" />
-                <div className="product-title">Hirono V2</div>
-                <div className="product-price">฿ 450</div>
-                <div className="product-footer">
-                  <div className="rating flex items-center">
-                    <div className="star">
-                      <i class="las la-star text-cyan"></i>
-                      <i class="las la-star text-cyan"></i>
-                      <i class="las la-star text-cyan"></i>
-                      <i class="las la-star-half-alt text-cyan"></i>
-                      <i class="lar la-star text-cyan"></i>
-                    </div>
-                    <BodyText className="rate-text text-sm">1.2k</BodyText>
-                  </div>
-                </div>
-              </div>
-            </CardBody>
-          </Card>
+          <CardProduct productItem={v} />
         ))}
       </div>
     </Div>
