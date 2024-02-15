@@ -15,7 +15,8 @@ export default {
       },
     },
     screens: {
-      sm: "390px", //  @media (min-width: 390px) { ..mobile }
+      // sm: "390px", //  @media (min-width: 390px) { ..mobile }
+      sm: "640px", //  @media (min-width: 640px) { ..mobile }
       md: "960px", //  @media (min-width: 960px) { ..tablet }
       lg: "1440px", //  @media (min-width: 1440px) { ..desktop }
     },
