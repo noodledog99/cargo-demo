@@ -6,10 +6,7 @@ const StyledTypo = styled.text``;
 
 function CaptionLink({ children, className, ...props }) {
   return (
-    <StyledTypo
-      className={`${className} text-caption text-decoration-line: underline`}
-      {...props}
-    >
+    <StyledTypo className={`${className} text-caption underline`} {...props}>
       {children}
     </StyledTypo>
   );

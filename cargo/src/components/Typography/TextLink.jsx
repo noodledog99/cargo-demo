@@ -6,10 +6,7 @@ const StyledTypo = styled.text``;
 
 function TextLink({ children, className, ...props }) {
   return (
-    <StyledTypo
-      className={`${className} text-body-text text-decoration-line: underline`}
-      {...props}
-    >
+    <StyledTypo className={`${className}  text-body-text underline`} {...props}>
       {children}
     </StyledTypo>
   );
