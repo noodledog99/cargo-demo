@@ -1,15 +1,108 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+
+import hironoV2Image from "../../assets/images/hirono-v2-image.png";
 
 export default function ViewModel() {
-  const [text, setText] = useState("Home Page");
+  const initialProductList = [
+    {
+      id: 1,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 2,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 3,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 4,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 5,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 6,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 7,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 8,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 9,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 10,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 11,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 12,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+    {
+      id: 13,
+      product_name: "Hirono V2",
+      price: 580,
+      rate: "1.2k",
+      product_image: hironoV2Image,
+    },
+  ];
+  const [productList, setProductList] = useState([]);
 
-  const handleSetText = (value) => {
-    setText(value);
-  };
+  useEffect(() => {
+    setProductList(initialProductList);
+  }, []);
 
   return {
-    text,
-    handleSetText,
-    setText
+    productList,
   };
 }
