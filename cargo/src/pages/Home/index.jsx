@@ -107,35 +107,6 @@ export default function HomePage() {
         <i class="lab la-accessible-icon"></i>
         <i class="las la-bell"></i>
       </div>
-
-      <div>
-        <H2 className="text-cyan">Product Card</H2>
-        <div class="grid grid-cols-4 gap-4">
-          <div>
-            <Card>
-              <CardBody>
-                <div className="product-content">
-                  <img src={hironoV2Image} className="product-img block" />
-                  <div className="product-title">Hirono V2</div>
-                  <div className="product-price">฿ 450</div>
-                  <div className="product-footer">
-                    <div className="rating flex items-center">
-                      <div className="star">
-                        <i class="las la-star text-cyan"></i>
-                        <i class="las la-star text-cyan"></i>
-                        <i class="las la-star text-cyan"></i>
-                        <i class="las la-star-half-alt text-cyan"></i>
-                        <i class="lar la-star text-cyan"></i>
-                      </div>
-                      <BodyText className="rate-text text-sm">1.2k</BodyText>
-                    </div>
-                  </div>
-                </div>
-              </CardBody>
-            </Card>
-          </div>
-        </div>
-      </div>
     </Div>
   );
 }
