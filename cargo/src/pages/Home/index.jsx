@@ -1,32 +1,16 @@
 import React from "react";
 import ViewModel from "./ViewModel";
-
 import styled from "@emotion/styled";
 import H4 from "../../components/Typography/H4";
-import BodyText from "../../components/Typography/BodyText";
 import ButtonGradient from "../../components/Common/Button/ButtonGradient";
-import hironoV2Image from "../../assets/images/hirono-v2-image.png";
 import SearchText from "../../components/Common/Input/SearchText";
 import Card from "../../components/Common/Card/Card";
 import CardProduct from "../../components/Common/Card/CardProduct";
 
-const Div = styled.div`
-  .fig-size-h1 {
-    font-size: 40px;
-    font-weight: bold;
-  }
-  .custom-btn {
-    color: red;
-    border: 1px solid red;
-  }
-  .custom-btn-2 {
-    color: green;
-    border: 1px solid green;
-  }
-`;
+const Div = styled.div``;
 
 export default function HomePage() {
-  const { productList } = ViewModel();
+  const { productList, goProductDetail } = ViewModel();
 
   return (
     <Div>
@@ -46,7 +30,7 @@ export default function HomePage() {
 
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {productList.map((v) => (
-          <CardProduct key={v.id} productItem={v} />
+          <CardProduct key={v.id} productItem={v} onClick={goProductDetail} />
         ))}
       </div>
     </Div>
