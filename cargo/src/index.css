@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Poppins';
+  font-family: 'Poppins', "Noto Sans Thai";
   background-color: transparent;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
