@@ -10,7 +10,7 @@ const Router = () => {
       element: <Main />,
       children: [
         {
-          path: "/home",
+          path: "/",
           element: <HomePage />,
         },
         {
