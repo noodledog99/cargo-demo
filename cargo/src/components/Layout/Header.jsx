@@ -27,7 +27,7 @@ export default function Header() {
         </div>
       </div>
       <div className="flex items-center gap-2 px-4">
-        <i class="las la-user text-[32px] text-blue"></i>
+        <i className="las la-user text-[32px] text-blue"></i>
         <TextLink className={"text-blue"}>เข้าสู่ระบบ</TextLink>
         <span className="text-neutral-secondary">|</span>
         <TextLink className="text-blue">สมัครสมาชิก</TextLink>
