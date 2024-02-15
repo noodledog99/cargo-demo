@@ -16,7 +16,7 @@ import SubTextLight from "../../components/Typography/SubTextLight";
 import SubTextLink from "../../components/Typography/SubTextLink";
 import ButtonOutline from "../../components/Common/Button/ButtonOutline";
 import ButtonGradient from "../../components/Common/Button/ButtonGradient";
-import { Card, CardBody, CardImage } from "../../components/Common/Card/Card";
+import { Card, CardBody } from "../../components/Common/Card/Card";
 import hironoV2Image from "../../assets/images/hirono-v2-image.png";
 
 const Div = styled.div`
@@ -113,21 +113,21 @@ export default function HomePage() {
         <div class="grid grid-cols-4 gap-4">
           <div>
             <Card>
-              <CardBody >
+              <CardBody>
                 <div className="product-content">
                   <img src={hironoV2Image} className="product-img block" />
                   <div className="product-title">Hirono V2</div>
                   <div className="product-price">฿ 450</div>
                   <div className="product-footer">
-                    <div className="rating">
+                    <div className="rating flex items-center">
                       <div className="star">
-                        <i class="fa-sharp fa-thin fa-star"></i>
-                        <i class="fa-sharp fa-thin fa-star"></i>
-                        <i class="fa-sharp fa-thin fa-star"></i>
-                        <i class="fa-sharp fa-thin fa-star"></i>
-                        <i class="fa-sharp fa-thin fa-star"></i>
+                        <i class="las la-star text-cyan"></i>
+                        <i class="las la-star text-cyan"></i>
+                        <i class="las la-star text-cyan"></i>
+                        <i class="las la-star-half-alt text-cyan"></i>
+                        <i class="lar la-star text-cyan"></i>
                       </div>
-                      <div className="rate-text">1.2k</div>
+                      <BodyText className="rate-text text-sm">1.2k</BodyText>
                     </div>
                   </div>
                 </div>
