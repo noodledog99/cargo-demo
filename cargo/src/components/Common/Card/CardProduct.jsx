@@ -16,7 +16,7 @@ const Div = styled.div`
 export default function CardProduct({ productItem, ...props }) {
   return (
     <Div {...props}>
-      <Card className={"hover:border-2 hover:border-cyan"}>
+      <Card className={"hover:cursor-pointer hover:border-2 hover:border-cyan"}>
         <div className="product-content">
           {/*  */}
           <div className="img-content relative w-full">
