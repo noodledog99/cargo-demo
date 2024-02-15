@@ -9,12 +9,12 @@ import H4 from "./../../components/Typography/H4";
 import TextLink from "../../components/Typography/TextLink";
 
 export default function ProductDetailPage() {
-  const { productList, productRelateList } = ViewModel();
+  const { demoCards, productRelateList, goBack } = ViewModel();
 
   return (
     <div className="flex w-full flex-col gap-12">
       <div className="flex w-full flex-col gap-4">
-        <p className="flex items-center gap-1">
+        <p className="flex items-center gap-1" onClick={goBack}>
           <i class="las la-arrow-left text-blue"></i>
           <Caption className={"text-blue"}>ย้อนกลับ</Caption>
         </p>
@@ -60,8 +60,8 @@ export default function ProductDetailPage() {
               </BodyText>
 
               <div className="flex h-full flex-1 flex-wrap gap-4">
-                {productList.map((it) => (
-                  <div>test</div>
+                {demoCards.map((v, i) => (
+                  <SelectedProductCard key={i} data={v} />
                 ))}
               </div>
             </div>

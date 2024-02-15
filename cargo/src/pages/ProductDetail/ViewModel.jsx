@@ -1,46 +1,58 @@
 import { useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 const MOCK_PRODUCT_LIST = [
   {
-    image: "",
-    text: "1 สุ่ม",
+    name: "1 สุ่ม",
+    img: demoSelectedProduct,
   },
   {
-    image: "",
-    text: "ไดโนเสาร์",
+    name: "1 สุ่ม",
+    img: demoSelectedProduct,
   },
   {
-    image: "",
-    text: "1 สุ่ม",
+    name: "ไดโนเสาร์",
+    img: demoSelectedProduct,
   },
   {
-    image: "",
-    text: "เครื่องบิน",
+    name: "ไดโนเสาร์",
+    img: demoSelectedProduct,
   },
   {
-    image: "",
-    text: "ตัวตลก",
+    name: "เครื่องบิน",
+    img: demoSelectedProduct,
   },
   {
-    image: "",
-    text: "กล่องของเล่น",
+    name: "ตัวตลก",
+    img: demoSelectedProduct,
   },
   {
-    image: "",
-    text: "สินค้าหมด",
+    name: "ตัวตลก",
+    img: demoSelectedProduct,
   },
   {
-    image: "",
-    text: "นกอิสระ",
+    name: "กล่องของเล่น",
+    img: demoSelectedProduct,
   },
   {
-    image: "",
-    text: "อ่างอาบน้ำ",
+    name: "กล่องของเล่น",
+    img: demoSelectedProduct,
   },
   {
-    image: "",
-    text: "สุ่ม 12 กล่อง",
+    name: "กล่องของเล่น",
+    img: demoSelectedProduct,
+  },
+  {
+    name: "กล่องของเล่น",
+    img: demoSelectedProduct,
+  },
+  {
+    name: "กล่องของเล่น",
+    img: demoSelectedProduct,
+  },
+  {
+    name: "กล่องของเล่น",
+    img: demoSelectedProduct,
   },
 ];
 
@@ -74,14 +86,20 @@ const MOCK_PRODUCT_RELATE_LIST = [
 ];
 
 export default function ViewModel() {
+  const navigate = useNavigate();
   const { id } = useParams();
-  const [productList, setProductList] = useState(MOCK_PRODUCT_LIST);
+  const [demoCards, setDemoCards] = useState(MOCK_PRODUCT_LIST);
   const [productRelateList, setProductRelateList] = useState(
     MOCK_PRODUCT_RELATE_LIST,
   );
 
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return {
-    productList,
+    demoCards,
     productRelateList,
+    goBack,
   };
 }
