@@ -14,7 +14,7 @@ export default function HomePage() {
 
   return (
     <Div>
-      <Card className="mb-6 border border-cyan-300 px-10 py-6">
+      <Card className="mb-6 border border-cyan-300 bg-cyan-300 px-10 py-6">
         <H4 className="mb-4 text-center text-blue">
           ใส่คำค้นหาหรือลิงค์สินค้าที่นี่
         </H4>
