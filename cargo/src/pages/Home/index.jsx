@@ -115,7 +115,7 @@ export default function HomePage() {
             <Card>
               <CardBody>
                 <div className="product-content">
-                  <img src={hironoV2Image} className="product-img" />
+                  <img src={hironoV2Image} className="product-img block" />
                   <div className="product-title">Hirono V2</div>
                   <div className="product-price">฿ 450</div>
                   <div className="product-footer">
