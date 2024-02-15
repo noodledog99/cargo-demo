@@ -12,7 +12,8 @@ import CardProduct from "../../components/Common/Card/CardProduct";
 import hironoV2Image from "../../assets/images/hirono-v2-image.png";
 
 export default function ProductDetailPage() {
-  const { productList, productRelateList, goBack } = ViewModel();
+  const { productList, productRelateList, goProductDetail, goBack } =
+    ViewModel();
 
   return (
     <div className="flex w-full flex-col gap-12">
@@ -117,8 +118,12 @@ export default function ProductDetailPage() {
           <TextLink className={"text-blue"}>เพิ่มเติม</TextLink>
         </div>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          {productRelateList.map((it, index) => (
-            <CardProduct productItem={it} key={index} />
+          {productRelateList.map((it) => (
+            <CardProduct
+              productItem={it}
+              key={it.id}
+              onClick={() => goProductDetail(it.id)}
+            />
           ))}
         </div>
       </div>

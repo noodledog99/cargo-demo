@@ -14,7 +14,7 @@ export default function HomePage() {
 
   return (
     <Div>
-      <Card className="mb-6 border border-cyan-300 bg-cyan-300 px-10 py-6">
+      <Card className="mb-6 border !border-cyan-300 bg-cyan-50 px-10 py-6">
         <H4 className="mb-4 text-center text-blue">
           ใส่คำค้นหาหรือลิงค์สินค้าที่นี่
         </H4>
@@ -30,7 +30,11 @@ export default function HomePage() {
 
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {productList.map((v) => (
-          <CardProduct key={v.id} productItem={v} onClick={goProductDetail} />
+          <CardProduct
+            key={v.id}
+            productItem={v}
+            onClick={() => goProductDetail(v.id)}
+          />
         ))}
       </div>
     </Div>
