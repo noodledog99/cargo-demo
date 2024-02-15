@@ -9,7 +9,7 @@ export const StyledCard = styled.div(
     overflow: hidden;
     border: 1px solid #ececec;
     ${width && `width: ${width};`}
-  `
+  `,
 );
 
 export const CardHeader = styled.div`
@@ -24,13 +24,16 @@ export const CardImage = styled.img(
     width: ${width ? width : "100%"};
     height: ${height ? height : "auto"};
     object-fit: ${objectFit || "cover"};
-  `
+  `,
 );
 
-export const CardBody = styled.div`
-  padding: 1.5rem;
-  padding-bottom: 1rem;
-`;
+export const CardBody = ({ children, className, ...props }) => {
+  return (
+    <div className={`${className}`} {...props}>
+      {children}
+    </div>
+  );
+};
 
 export const CardFooter = styled.div`
   padding: 1.5rem;

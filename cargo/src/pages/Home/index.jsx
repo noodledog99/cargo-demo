@@ -113,7 +113,7 @@ export default function HomePage() {
         <div class="grid grid-cols-4 gap-4">
           <div>
             <Card>
-              <CardBody>
+              <CardBody >
                 <div className="product-content">
                   <img src={hironoV2Image} className="product-img block" />
                   <div className="product-title">Hirono V2</div>
