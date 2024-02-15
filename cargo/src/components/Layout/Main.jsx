@@ -20,7 +20,7 @@ export default function Main() {
   return (
     <Div>
       <Header />
-      <div className="content-container mx-10 my-12">
+      <div className="content-container mx-auto my-12 w-full max-w-[1440px] px-10">
         <Outlet />
       </div>
       <Footer />
