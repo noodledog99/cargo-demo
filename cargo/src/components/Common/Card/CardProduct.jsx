@@ -11,6 +11,10 @@ const Div = styled.div`
   .tag-round {
     border-radius: 0px 20px 20px 0px;
   }
+
+  .discount {
+    font-size: 0.625rem;
+  }
 `;
 
 export default function CardProduct({ productItem, ...props }) {
@@ -36,6 +40,13 @@ export default function CardProduct({ productItem, ...props }) {
             <H4Light className="product-title">
               {productItem.product_name}
             </H4Light>
+            {productItem.reduced_price !== 0 && (
+              <Caption
+                className={"mr-2 font-normal text-neutral-hint line-through"}
+              >
+                {`฿ ${productItem.reduced_price}`}
+              </Caption>
+            )}
             <BodyText
               className={"text-blue"}
             >{`฿ ${productItem.price}`}</BodyText>
@@ -48,9 +59,19 @@ export default function CardProduct({ productItem, ...props }) {
                   <i className="las la-star-half-alt h-4 w-4 text-cyan"></i>
                   <i className="lar la-star h-4 w-4 text-cyan"></i>
                 </div>
-                <BodyText className="rate-text text-sm text-neutral-secondary">
+
+                <BodyText className="rate-text mr-2 text-sm text-neutral-secondary">
                   {productItem.rate}
                 </BodyText>
+                {productItem.discount && (
+                  <div className="flex justify-center rounded bg-accent-red ">
+                    <BodyText
+                      className={
+                        "discount px-1 py-1 font-bold text-neutral-white"
+                      }
+                    >{`ลด ${productItem.discount}`}</BodyText>
+                  </div>
+                )}
               </div>
             </div>
           </div>

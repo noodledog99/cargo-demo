@@ -11,6 +11,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "40%",
+      reduced_price: 250,
     },
     {
       id: 2,
@@ -18,6 +20,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 3,
@@ -25,6 +29,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 4,
@@ -32,6 +38,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 5,
@@ -39,6 +47,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 6,
@@ -46,6 +56,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 7,
@@ -53,6 +65,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "35%",
+      reduced_price: 0,
     },
     {
       id: 8,
@@ -60,6 +74,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 9,
@@ -67,6 +83,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 10,
@@ -74,6 +92,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 11,
@@ -81,6 +101,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 12,
@@ -88,6 +110,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
     {
       id: 13,
@@ -95,6 +119,8 @@ export default function ViewModel() {
       price: 580,
       rate: "1.2k",
       product_image: hironoV2Image,
+      discount: "",
+      reduced_price: 0,
     },
   ];
   const navigate = useNavigate();
