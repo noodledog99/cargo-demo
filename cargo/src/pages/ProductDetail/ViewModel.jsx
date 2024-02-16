@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router";
+
 import demoSelectedProduct from "../../assets/images/demo-selected-product.png";
+import demoSearchedProduct from "../../assets/images/demo-searched-product.png";
 import hironoV2Image from "../../assets/images/hirono-v2-image.png";
+import demo1 from "../../assets/images/demo-img-1.png";
+import demo2 from "../../assets/images/demo-img-2.png";
+import demo3 from "../../assets/images/demo-img-3.png";
+import demo4 from "../../assets/images/demo-img-4.png";
 
 const MOCK_PRODUCT_LIST = [
   {
@@ -81,13 +87,44 @@ const MOCK_PRODUCT_RELATE_LIST = [
   },
 ];
 
+const MOCK_IMAGES_CAROUSEL = [
+  {
+    id: 1,
+    image: hironoV2Image,
+  },
+  {
+    id: 2,
+    image: demoSelectedProduct,
+  },
+  {
+    id: 3,
+    image: demoSearchedProduct,
+  },
+  {
+    id: 4,
+    image: demo1,
+  },
+  {
+    id: 5,
+    image: demo2,
+  },
+  {
+    id: 6,
+    image: demo3,
+  },
+  {
+    id: 7,
+    image: demo4,
+  },
+];
+
 export default function ViewModel() {
+  // external hook
   const navigate = useNavigate();
-  const { id } = useParams();
-  const [productList, setProductList] = useState(MOCK_PRODUCT_LIST);
-  const [productRelateList, setProductRelateList] = useState(
-    MOCK_PRODUCT_RELATE_LIST,
-  );
+
+  const [productList] = useState(MOCK_PRODUCT_LIST);
+  const [productRelateList] = useState(MOCK_PRODUCT_RELATE_LIST);
+  const [imageCarousels] = useState(MOCK_IMAGES_CAROUSEL);
 
   const goProductDetail = (id) => {
     navigate(`/product-detail/${id}`);
@@ -100,6 +137,7 @@ export default function ViewModel() {
   return {
     productList,
     productRelateList,
+    imageCarousels,
     goProductDetail,
     goBack,
   };
