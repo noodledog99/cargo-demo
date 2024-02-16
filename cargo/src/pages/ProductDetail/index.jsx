@@ -1,19 +1,27 @@
 import React from "react";
 import ViewModel from "./ViewModel";
-import Caption from "./../../components/Typography/Caption";
-import BodyText from "./../../components/Typography/BodyText";
+
+import { Carousel } from "react-responsive-carousel";
+
 import H3 from "./../../components/Typography/H3";
+import H4 from "./../../components/Typography/H4";
+import BodyText from "./../../components/Typography/BodyText";
+import TextLink from "../../components/Typography/TextLink";
+import Caption from "./../../components/Typography/Caption";
+
 import ButtonOutline from "./../../components/Common/Button/ButtonOutline";
 import ButtonGradient from "./../../components/Common/Button/ButtonGradient";
-import H4 from "./../../components/Typography/H4";
-import TextLink from "../../components/Typography/TextLink";
-import SelectedProductCard from "./components/SelectedProduct";
 import CardProduct from "../../components/Common/Card/CardProduct";
-import hironoV2Image from "../../assets/images/hirono-v2-image.png";
+import SelectedProductCard from "./components/SelectedProduct";
 
 export default function ProductDetailPage() {
-  const { productList, productRelateList, goProductDetail, goBack } =
-    ViewModel();
+  const {
+    productList,
+    productRelateList,
+    imageCarousels,
+    goProductDetail,
+    goBack,
+  } = ViewModel();
 
   return (
     <div className="flex w-full flex-col gap-12">
@@ -26,12 +34,25 @@ export default function ProductDetailPage() {
           <Caption className={"text-blue"}>ย้อนกลับ</Caption>
         </p>
         <div className="flex w-full gap-10">
-          <div className="flex w-[553px] flex-shrink-0">
-            <img
-              src={hironoV2Image}
-              className="h-[415px] w-full rounded-lg object-cover"
-              alt="image-product"
-            />
+          <div className="max-w-[553px]">
+            <Carousel
+              showArrows={true}
+              showStatus={false}
+              infiniteLoop={true}
+              useKeyboardArrows={true}
+              autoPlay={true}
+              emulateTouch={true}
+            >
+              {imageCarousels.map((v) => (
+                <div key={v.id}>
+                  <img
+                    className="rounded-lg"
+                    src={v.image}
+                    alt={`img ${v.id}`}
+                  />
+                </div>
+              ))}
+            </Carousel>
           </div>
           <div className="flex flex-1 flex-col">
             <div className="flex items-center justify-between">
@@ -72,7 +93,7 @@ export default function ProductDetailPage() {
                 ตัวเลือกสินค้า
               </BodyText>
 
-              <div className="flex h-full flex-1 flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4">
                 {productList.map((v, i) => (
                   <SelectedProductCard key={i} data={v} />
                 ))}
