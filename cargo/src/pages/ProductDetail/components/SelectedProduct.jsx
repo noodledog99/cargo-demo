@@ -5,7 +5,7 @@ import BodyText from "../../../components/Typography/BodyText";
 
 function SelectedProductCard({ data, ...props }) {
   return (
-    <Card className="inline-block" {...props}>
+    <Card className="inline-block cursor-pointer" {...props}>
       <img className="inline-block" src={data.img} />
       <BodyText className="mx-2">{data.name}</BodyText>
     </Card>
