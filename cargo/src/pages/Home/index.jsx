@@ -1,13 +1,14 @@
 import React from "react";
 import ViewModel from "./ViewModel";
+
 import styled from "@emotion/styled";
 import H4 from "../../components/Typography/H4";
+import BodyText from "../../components/Typography/BodyText";
 import ButtonGradient from "../../components/Common/Button/ButtonGradient";
 import SearchText from "../../components/Common/Input/SearchText";
 import Card from "../../components/Common/Card/Card";
 import CardProduct from "../../components/Common/Card/CardProduct";
 import Divider from "../../components/Common/Divider";
-import BodyText from "../../components/Typography/BodyText";
 
 const Div = styled.div``;
 
